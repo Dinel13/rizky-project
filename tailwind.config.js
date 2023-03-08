@@ -17,7 +17,12 @@ module.exports = {
         main: "#263159",
         second: "#495579",
         third: "#251749",
-        bone: "#F9F6EE",
+        // bone: "#F9F6EE",
+        bone: "#FEFCFF",
+      },
+      fontSize: {
+        "2xs": ".65rem",
+        "3xs": ".55rem"
       },
     },
     screens: {
@@ -32,7 +37,7 @@ module.exports = {
       "2xl": "1536px",
     },
     fontSize: {
-      xs: ".75rem",
+      xs: ".77rem",
       sm: ".875rem",
       base: "1rem",
       lg: "1.125rem",

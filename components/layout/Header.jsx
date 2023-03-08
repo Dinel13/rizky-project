@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import CardVideo from "components/video/CardVideo";
 
@@ -23,22 +23,24 @@ const Header = () => {
               className="rounded"
             />
           </div> */}
-          <div className="bg-bone rounded-r-xl">
-            <p className="pl-2 pr-2.5 py-1 leading-10 text-5xl font-black text-third ">R</p>
+          <div className="bg-bone rounded-tr-xl">
+            <p className="pl-1 pr-1.5 leading-9 text-4xl font-black text-third ">
+              R
+            </p>
           </div>
-          <span className="text-2xl font-semibold tracking-widest ml-2">
+          <span className="text-2xl font-semibold tracking-widest ml-1">
             RIZKI
           </span>
         </Link>
-        <nav className="ml-auto mr-auto flex flex-wrap items-center text-lg justify-center gap-x-4 gap-y-1 font-alegreya font-semibold tracking-wider text-white">
+        <nav className=" ml-auto mr-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-alegreya font-medium tracking-wider text-white">
           <button
             href="Video"
-            className="hover:text-gray-100 hover:font-bold"
+            className="hover:text-gray-300 hover:font-bold"
             onClick={() => setIsOpnVid((p) => !p)}
           >
             Video pembelajaran
           </button>
-          <Link href="Pdf" className="hover:text-gray-100 hover:font-bold">
+          <Link href="Pdf" className="hover:text-gray-300 hover:font-bold">
             File pembelajaran
           </Link>
         </nav>
@@ -53,6 +55,7 @@ const Header = () => {
           <CardVideo />
         </div>
       )}
+     
     </header>
   );
 };

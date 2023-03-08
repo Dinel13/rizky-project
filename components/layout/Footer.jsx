@@ -4,167 +4,170 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        borderTopRightRadius: "3rem",
-        borderTopLeftRadius: "3rem",
-      }}
-      className="bg-gradient-to-l from-main via-third to-main"
-    >
-      <div className="container px-5 pt-8 pb-12 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-        <div className="w-80 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <Link
-            href="/"
-            className="flex title-font items-center md:justify-start justify-center"
-          >
-            <span className="text-2xl tracking-widest font-semibold text-gray-50">
-              RUKI
-            </span>
-          </Link>
-          <p className="mt-2 text-sm mb-1 text-gray-200">
-            Jalan Urip Sumoharjo Km 05, Kelurahan Panaikang, Kecamatan
-            Panakukang, Kampus UMI
-          </p>
-        </div>
-        <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center gap-x-3">
-          <div className="mx-auto px-4">
-            <h2 className="font-semibold text-gray-200 tracking-widest text-xl mb-1.5">
-              Layanan Lain
+    <footer className="footer bg-gradient-to-l from-main via-third to-main mt-16">
+      <div className="wrapper">
+        <div className="flex flex-wrap justify-between items-start mt-16">
+          <div className="my-10 w-full xs:w-1/2 sm:w-1/3 md:w-1/3">
+            <h5 className="text-white text-2xl font-semibold my-2 tracking-wider">
+              Materi Pelajaran
+            </h5>
+            <Link
+              href=""
+              className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+            >
+              Mata pelajaran 1
+            </Link>
+            <Link
+              href=""
+              className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+            >
+              Mata pelajaran 2
+            </Link>
+            <Link
+              href=""
+              className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+            >
+              Mata pelajaran 3
+            </Link>
+            <Link
+              href=""
+              className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+            >
+              Mata pelajaran 4
+            </Link>
+            <Link
+              href=""
+              className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+            >
+              Mata pelajaran 5
+            </Link>
+          </div>
+          <div className="my-10 w-full xs:w-1/2 sm:w-1/3 md:w-1/4">
+            <div>
+              <h2 className="text-white text-2xl font-semibold my-2 tracking-wider">
+                Tentang kami
+              </h2>
+              <Link
+                href=""
+                className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+              >
+                About US
+              </Link>
+              <Link
+                href=""
+                className="block text-gray-300 hover:text-sky-300 text-base my-2.5"
+              >
+                Testimonial
+              </Link>
+            </div>
+          </div>
+          <div className="my-10 w-full xs:w-1/2 sm:w-1/3 lg:w-1/5">
+            <h2 className="text-white text-2xl font-semibold my-2 tracking-wider">
+              Kontak kami
             </h2>
-            <div className="flex gap-x-2 mb-10 ">
-              <a
-                href="https://www.instagram.com/ruki.indonesia"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="h-8 w-8 text-gray-300 hover:text-sky-400"
+            <div className="mt-3 flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.tiktok.com/@brajaksonsiokal"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 34 34"
-                  className="h-8 w-8 text-gray-300 hover:text-sky-400"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                    viewBox="0 0 24 24"
+                    className="h-9 w-9 -ml-0.5 -mb-1.5 text-white hover:text-sky-600"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"
+                    />
+                  </svg>
+                </a>
+                <p className="text-base text-gray-200">facebook.com/user</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"
-                  ></path>
-                </svg>
-              </a>
-
-              <a
-                href="https://www.facebook.com/brajakson.siokal?mibextid=ZbWKwL"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                  className="h-8 w-8 text-gray-300 hover:text-sky-400"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="h-8 w-8 text-white hover:text-sky-600"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M9.72 20.16v0c-0.8 0-1.32-0.6-1.36-1.44 0-0.16 0-5.44 0-5.48 0.040-0.8 0.6-1.4 1.36-1.4 0.24 0 0.48 0.040 0.68 0.16 0.44 0.24 5.24 2.84 5.24 2.84 0.44 0.28 0.68 0.68 0.68 1.12s-0.24 0.84-0.64 1.12c0 0-5.24 2.84-5.28 2.88-0.2 0.12-0.44 0.2-0.68 0.2zM10.040 13.68v4.52c0 0.040 0 0.080 0 0.080l4.24-2.28c0 0-3.96-2.16-4.24-2.32zM11.52 24.48c-2.44 0-5.4-0.2-7.72-0.48-2-0.24-3.12-1.28-3.44-3.16-0.24-1.24-0.36-2.96-0.36-4.84s0.12-3.6 0.32-4.84c0.32-1.88 1.44-2.92 3.44-3.16 2.32-0.28 5.28-0.48 7.72-0.48s5.4 0.2 7.72 0.48c2 0.24 3.12 1.28 3.44 3.16 0.2 1.24 0.32 2.96 0.32 4.84s-0.12 3.6-0.32 4.84c-0.32 1.88-1.44 2.92-3.44 3.16-2.28 0.28-5.24 0.48-7.68 0.48zM11.52 9.16c-2.36 0-5.24 0.16-7.48 0.44-1.48 0.2-1.88 0.88-2.040 1.84-0.2 1.2-0.32 2.8-0.32 4.56s0.12 3.36 0.32 4.52c0.16 0.96 0.6 1.64 2.040 1.84 2.24 0.28 5.12 0.44 7.48 0.44s5.24-0.16 7.48-0.44c1.48-0.2 1.88-0.88 2.040-1.84 0.2-1.16 0.32-2.76 0.32-4.52s-0.12-3.36-0.32-4.52c-0.16-0.96-0.6-1.64-2.040-1.84-2.24-0.28-5.12-0.48-7.48-0.48z"
+                    ></path>
+                  </svg>
+                  <p className="text-base text-gray-200">youtube.com/user</p>
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@brajaksonsiokal2873"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-8 w-8 -my-1 text-gray-300 hover:text-sky-400"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="h-8 w-8 text-white hover:text-sky-600"
+                  >
+                    <path
+                      d="M4 9.00005L10.2 13.65C11.2667 14.45 12.7333 14.45 13.8 13.65L20 9"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M3 9.17681C3 8.45047 3.39378 7.78123 4.02871 7.42849L11.0287 3.5396C11.6328 3.20402 12.3672 3.20402 12.9713 3.5396L19.9713 7.42849C20.6062 7.78123 21 8.45047 21 9.17681V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V9.17681Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </a>
+                <p className="text-base text-gray-200">user@gmail.com</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-3"
                 >
-                  <path
-                    fill="currentColor"
-                    d="M9.72 20.16v0c-0.8 0-1.32-0.6-1.36-1.44 0-0.16 0-5.44 0-5.48 0.040-0.8 0.6-1.4 1.36-1.4 0.24 0 0.48 0.040 0.68 0.16 0.44 0.24 5.24 2.84 5.24 2.84 0.44 0.28 0.68 0.68 0.68 1.12s-0.24 0.84-0.64 1.12c0 0-5.24 2.84-5.28 2.88-0.2 0.12-0.44 0.2-0.68 0.2zM10.040 13.68v4.52c0 0.040 0 0.080 0 0.080l4.24-2.28c0 0-3.96-2.16-4.24-2.32zM11.52 24.48c-2.44 0-5.4-0.2-7.72-0.48-2-0.24-3.12-1.28-3.44-3.16-0.24-1.24-0.36-2.96-0.36-4.84s0.12-3.6 0.32-4.84c0.32-1.88 1.44-2.92 3.44-3.16 2.32-0.28 5.28-0.48 7.72-0.48s5.4 0.2 7.72 0.48c2 0.24 3.12 1.28 3.44 3.16 0.2 1.24 0.32 2.96 0.32 4.84s-0.12 3.6-0.32 4.84c-0.32 1.88-1.44 2.92-3.44 3.16-2.28 0.28-5.24 0.48-7.68 0.48zM11.52 9.16c-2.36 0-5.24 0.16-7.48 0.44-1.48 0.2-1.88 0.88-2.040 1.84-0.2 1.2-0.32 2.8-0.32 4.56s0.12 3.36 0.32 4.52c0.16 0.96 0.6 1.64 2.040 1.84 2.24 0.28 5.12 0.44 7.48 0.44s5.24-0.16 7.48-0.44c1.48-0.2 1.88-0.88 2.040-1.84 0.2-1.16 0.32-2.76 0.32-4.52s-0.12-3.36-0.32-4.52c-0.16-0.96-0.6-1.64-2.040-1.84-2.24-0.28-5.12-0.48-7.48-0.48z"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/brajaksonsiokal"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-8 w-8 text-gray-300 hover:text-sky-400"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://t.me/rukiindonesia"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  className="h-8 w-8 text-gray-300 hover:text-sky-400"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12.3583 9.38244C11.3857 9.787 9.44177 10.6243 6.52657 11.8944C6.05318 12.0827 5.8052 12.2669 5.78263 12.4469C5.74448 12.7513 6.12559 12.8711 6.64455 13.0343C6.71515 13.0565 6.78829 13.0795 6.86327 13.1038C7.37385 13.2698 8.06068 13.464 8.41773 13.4717C8.74161 13.4787 9.1031 13.3452 9.50219 13.0711C12.226 11.2325 13.632 10.3032 13.7202 10.2831C13.7825 10.269 13.8688 10.2512 13.9273 10.3032C13.9858 10.3552 13.98 10.4536 13.9738 10.48C13.9361 10.641 12.4401 12.0318 11.6659 12.7515C11.4246 12.9759 11.2534 13.135 11.2184 13.1714C11.14 13.2528 11.0601 13.3298 10.9833 13.4038C10.509 13.8611 10.1532 14.204 11.003 14.764C11.4114 15.0331 11.7381 15.2556 12.0641 15.4776C12.4201 15.7201 12.7752 15.9619 13.2347 16.2631C13.3517 16.3398 13.4635 16.4195 13.5724 16.4971C13.9867 16.7925 14.3589 17.0579 14.8188 17.0155C15.086 16.991 15.362 16.7397 15.5022 15.9903C15.8335 14.2193 16.4847 10.382 16.6352 8.80081C16.6484 8.66228 16.6318 8.48498 16.6185 8.40715C16.6051 8.32932 16.5773 8.21842 16.4761 8.13633C16.3563 8.03911 16.1714 8.01861 16.0886 8.02C15.7125 8.0267 15.1354 8.22735 12.3583 9.38244Z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.facebook.com/RumahUkomIndonesia?mibextid=ZbWKwL"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="xMidYMid meet"
-                  viewBox="0 0 24 24"
-                  className="h-8 w-8 text-gray-300 hover:text-sky-400"
-                >
-                  <path
-                    fill="currentColor"
-                    d="M12 2.04c-5.5 0-10 4.49-10 10.02c0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89c1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"
-                  />
-                </svg>
-              </a>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="h-10 w-10 -ml-1 -mr-1 text-white hover:text-sky-600"
+                  >
+                    <path
+                      d="M17.6 6.31999C16.8669 5.58141 15.9943 4.99596 15.033 4.59767C14.0716 4.19938 13.0406 3.99622 12 3.99999C10.6089 4.00135 9.24248 4.36819 8.03771 5.06377C6.83294 5.75935 5.83208 6.75926 5.13534 7.96335C4.4386 9.16745 4.07046 10.5335 4.06776 11.9246C4.06507 13.3158 4.42793 14.6832 5.12 15.89L4 20L8.2 18.9C9.35975 19.5452 10.6629 19.8891 11.99 19.9C14.0997 19.9001 16.124 19.0668 17.6222 17.5816C19.1205 16.0965 19.9715 14.0796 19.99 11.97C19.983 10.9173 19.7682 9.87634 19.3581 8.9068C18.948 7.93725 18.3505 7.05819 17.6 6.31999ZM12 18.53C10.8177 18.5308 9.65701 18.213 8.64 17.61L8.4 17.46L5.91 18.12L6.57 15.69L6.41 15.44C5.55925 14.0667 5.24174 12.429 5.51762 10.8372C5.7935 9.24545 6.64361 7.81015 7.9069 6.80322C9.1702 5.79628 10.7589 5.28765 12.3721 5.37368C13.9853 5.4597 15.511 6.13441 16.66 7.26999C17.916 8.49818 18.635 10.1735 18.66 11.93C18.6442 13.6859 17.9355 15.3645 16.6882 16.6006C15.441 17.8366 13.756 18.5301 12 18.53ZM15.61 13.59C15.41 13.49 14.44 13.01 14.26 12.95C14.08 12.89 13.94 12.85 13.81 13.05C13.6144 13.3181 13.404 13.5751 13.18 13.82C13.07 13.96 12.95 13.97 12.75 13.82C11.6097 13.3694 10.6597 12.5394 10.06 11.47C9.85 11.12 10.26 11.14 10.64 10.39C10.6681 10.3359 10.6827 10.2759 10.6827 10.215C10.6827 10.1541 10.6681 10.0941 10.64 10.04C10.64 9.93999 10.19 8.95999 10.03 8.56999C9.87 8.17999 9.71 8.23999 9.58 8.22999H9.19C9.08895 8.23154 8.9894 8.25465 8.898 8.29776C8.8066 8.34087 8.72546 8.403 8.66 8.47999C8.43562 8.69817 8.26061 8.96191 8.14676 9.25343C8.03291 9.54495 7.98287 9.85749 8 10.17C8.0627 10.9181 8.34443 11.6311 8.81 12.22C9.6622 13.4958 10.8301 14.5293 12.2 15.22C12.9185 15.6394 13.7535 15.8148 14.58 15.72C14.8552 15.6654 15.1159 15.5535 15.345 15.3915C15.5742 15.2296 15.7667 15.0212 15.91 14.78C16.0428 14.4856 16.0846 14.1583 16.03 13.84C15.94 13.74 15.81 13.69 15.61 13.59Z"
+                      fill="currentColor"
+                      strokeWidth="1.5"
+                    />
+                  </svg>
+                  <p className="text-base text-gray-200">084564566456</p>
+                </a>
+                
+              </div>
             </div>
           </div>
         </div>
+        <p className="text-sm text-gray-200 py-2 border-t my-10 pt-4">
+          © PT Rizki Edukasi Bangsa, 2023.
+        </p>
       </div>
-      <p className="text-sm text-gray-200 text-center py-2">
-        © Copyright 2023 RUKI.{" "}
-        <a
-          href="https://instagram.com/dinel.tech"
-          target="_blank"
-          rel="noreferrer"
-          className=""
-        >
-          All rights reserved
-        </a>
-      </p>
     </footer>
   );
 }

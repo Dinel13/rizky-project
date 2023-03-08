@@ -1,7 +1,11 @@
 import withLayout from "@hoc/withLayout";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
 
 const Home = () => {
+  const paketRef = useRef(null);
   return (
     <>
       <Head>
@@ -10,7 +14,191 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="">gg</main>
+      <main className="">
+        <section className="banner items-center justify-center px-5 py-12 md:py-24 flex flex-wrap-reverse">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 lg:pr-20 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 className="mb-1 text-2xl sm:text-3xl lg:text-4xl font-bold text-second">
+              {/* <span className="font-black text-main text-3xl sm:text-4xl lg:text-5xl">
+                RIZKI
+              </span>{" "} */}
+              Selamat Datang di Platform Kami untuk Guru Indonesia
+            </h1>
+            <p className="mb-10 text-base leading-relaxed max-w-lg text-gray-500">
+              Materi Pembelajaran Video dan PDF Berkualitas Tinggi untuk
+              Meningkatkan Kualitas Pengajaran Anda
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button
+                onClick={() =>
+                  paketRef.current?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="btn-ter py-2.5 px-9 w-full lg:w-auto text-center"
+              >
+                Pelajari Lebih Lanjut!
+              </button>
+            </div>
+          </div>
+          <div className="lg:block w-72 h-56 lg:w-106 lg:h-96 relative mb-10">
+            <Image
+              id="home-image"
+              className="object-cover object-center rounded absolute"
+              src="/assets/images/home.webp"
+              width={130}
+              height={100}
+              layout="responsive"
+              alt="orang belajar"
+            />
+          </div>
+        </section>
+        <section className="wrapper">
+          <h3 className="mb-1 text-xl sm:text-2xl lg:text-3xl  xl:text-4xl font-bold text-second text-center">
+            Pembelajaran lebih udah bersama kami
+          </h3>
+          <div className="grid grid-cols-2 mt-10 gap-6">
+            <div className="mb-10 col-span-2 md:col-span-1">
+              <div className="relative w-full h-full">
+                <Image
+                  className="object-contain rounded"
+                  src="/assets/images/offer.webp"
+                  fill
+                  alt="orang belajar"
+                  quality={40}
+                />
+              </div>
+            </div>
+            <div className="mb-10 col-span-2 md:col-span-1">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-none items-center justify-center w-16 h-16 rounded-full text-4xl font-bold bg-gradient-to-br from-main to-purple-700 text-white">
+                  1
+                </div>
+                <div className="pl-4 flex-grow">
+                  <h4 className="text-third text-xl font-semibold">
+                    Materi Pembelajaran Berkualitas Tinggi
+                  </h4>
+                  <p className="text-gray-600">
+                    Kami menyediakan materi pembelajaran video dan PDF yang
+                    berkualitas tinggi untuk mendukung pengajaran yang lebih
+                    baik. Materi kami disusun oleh ahli di bidangnya dan
+                    disesuaikan dengan kurikulum nasional.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-none items-center justify-center w-16 h-16 rounded-full text-4xl font-bold bg-gradient-to-br from-main to-purple-700 text-white">
+                  2
+                </div>
+                <div className="pl-4 flex-grow">
+                  <h4 className="text-third text-xl font-semibold">
+                    Akses Mudah ke Materi Pembelajara
+                  </h4>
+                  <p>
+                    Platform kami mudah digunakan dan menawarkan fitur pencarian
+                    yang memudahkan pengguna menemukan materi pembelajaran yang
+                    tepat. Pengguna dapat dengan mudah menelusuri materi kami
+                    berdasarkan subjek, kelas, atau topik.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-none items-center justify-center w-16 h-16 rounded-full text-4xl font-bold bg-gradient-to-br from-main to-purple-700 text-white">
+                  3
+                </div>
+                <div className="pl-4 flex-grow">
+                  <h4 className="text-third text-xl font-semibold">
+                    Pilihan Video Tutorial
+                  </h4>
+                  <p>
+                    Video tutorial kami tersedia untuk berbagai mata pelajaran
+                    dan dibagi menjadi beberapa bagian untuk memudahkan pengguna
+                    memilih bagian yang ingin mereka tonton. Pengguna juga dapat
+                    mengunduh video jika diperlukan.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-none items-center justify-center w-16 h-16 rounded-full text-4xl font-bold bg-gradient-to-br from-main to-purple-700 text-white">
+                  4
+                </div>
+                <div className="pl-4 flex-grow">
+                  <h4 className="text-third text-xl font-semibold">
+                    Panduan PDF Berkualitas Tinggi
+                  </h4>
+                  <p>
+                    Panduan PDF kami tersedia untuk berbagai mata pelajaran dan
+                    dirancang untuk membantu guru dan siswa memahami materi
+                    dengan mudah. Panduan kami dapat dilihat di situs web kami
+                    dan pengguna dapat mengunduhnya untuk digunakan di kelas.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex flex-none items-center justify-center w-16 h-16 rounded-full text-4xl font-bold bg-gradient-to-br from-main to-purple-700 text-white">
+                  5
+                </div>
+                <div className="pl-4 flex-grow">
+                  <h4 className="text-third text-xl font-semibold">
+                    Bantuan dan Dukungan
+                  </h4>
+                  <p>
+                    Kami menyediakan bantuan dan sumber daya tambahan untuk
+                    membantu pengguna memaksimalkan pengalaman pembelajaran
+                    mereka. Tim kami siap membantu pengguna dengan pertanyaan
+                    atau masalah teknis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <br />
+        <br />
+        <br ref={paketRef} />
+        <div className="curved bg-gradient-to-gr from-main via-third to-main w-full relative">
+          <div className="wrapper">
+            <div className="text-center">
+              <h3 className="mb-1 text-xl sm:text-2xl lg:text-3xl  xl:text-4xl font-bold text-main">
+                Temukan kemudaahan kamu di sini
+              </h3>
+              <p className="text-gray-600 max-w-xl mx-auto mt-6 text-base">
+                Kami memahami bahwa Anda mencari materi pembelajaran yang
+                berkualitas dan mudah diakses. Oleh karena itu, kami menyediakan
+                beragam pilihan yang dapat membantu Anda dalam pengajaran.
+              </p>
+            </div>
+            <div className="grid gap-10 grid-cols-2 mt-16">
+              <div className="bg-gradient-to-r from-pink-700 via-fuchsia-700 to-purple-800 col-span-2 sm:col-span-1 px-9 py-7 rounded-3xl">
+                <h4 className="text-xl text-gray-100 font-semibold">
+                  Materi Pembelajaran Video
+                </h4>
+                <p className="text-base text-gray-300 mt-2">
+                  Temukan materi pembelajaran video berkualitas tinggi untuk
+                  berbagai mata pelajaran dan tingkat kelas. Tonton video sesuai
+                  dengan topik atau bagian tertentu dari materi pembelajaran.
+                </p>
+                <Link href="" className="btn-ter py-2 px-8 mt-5 inline-block">
+                  Lihat detail
+                </Link>
+              </div>
+              <div className="bg-gradient-to-r from-purple-700 via-fuchsia-700 to-pink-800 col-span-2 sm:col-span-1 px-9 py-7 rounded-3xl">
+                <h4 className="text-xl text-gray-100 font-semibold">
+                  Materi Pembelajaran PDF
+                </h4>
+                <p className="text-base text-gray-300 mt-2">
+                  Preview dan unduh materi pembelajaran PDF berkualitas tinggi
+                  yang sesuai dengan kurikulum nasional. Baca, catat, dan
+                  pelajari materi dengan mudah.
+                </p>
+                <Link href="" className="btn-ter py-2 px-8 mt-5 inline-block">
+                  Lihat detail
+                </Link>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </main>
     </>
   );
 };

@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+  .btn-main {
+    @apply text-white bg-main hover:bg-second rounded-full text-sm leading-relaxed transition-colors duration-150;
+  }
+
+  .btn-sec {
+    @apply text-white bg-main hover:bg-sky-500 rounded-md leading-relaxed transition-colors duration-150;
+  }
+
+  .btn-ter {
+    @apply text-white bg-gradient-to-r from-main via-indigo-800 to-purple-800 text-center hover:from-purple-800 hover:to-main text-sm rounded-full leading-relaxed transition-colors duration-150;
+  }
+
+
+  .wrapper {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-14 xl:px-16 py-4 sm:py-6 md:py-9 lg:py-12 xl:py-16;
+  }
+
+  .wrapper-course {
+    @apply max-w-7xl grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6;
+  }
+
+  .wrapper-full {
+    @apply max-w-7xl mx-auto lg:px-3 xl:px-4 lg:py-5 xl:py-6;
+  }
+}
+
+.curved {
+  border-radius: 100% 100% 100% 100% / 12% 12% 30% 30%;
+  min-height: 100px;
+}
+
+.footer {
+  border-radius: 100% 100% 0 0 / 16% 16% 0 0;
+  min-height: 100px;
+}
+
+
+#home-image {
+  position: relative;
+  animation: slide 2s ease-outh infinite;
+  transform-origin: center;
+}
+
+@keyframes slide {
+  0% {
+    transform: translatey(0%) rotate(0deg);
+  }
+  25% {
+    transform: translatey(0%) rotate(2deg);
+  }
+  50% {
+    transform: translatey(1%) rotate(0deg);
+  }
+  75% {
+    transform: translatey(0%) rotate(-2deg);
+  }
+  100% {
+    transform: translatey(0%) rotate(0deg);
+  }
+}
