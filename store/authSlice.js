@@ -22,22 +22,7 @@ export const authSlice = createSlice({
       state.token = action.payload;
     },
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchToken.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchToken.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.token = action.payload;
-        // set the token in a cookie
-        document.cookie = `token=${action.payload}`;
-      })
-      .addCase(fetchToken.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
-      });
-  },
+
 });
 
 export const { setToken } = authSlice.actions;
