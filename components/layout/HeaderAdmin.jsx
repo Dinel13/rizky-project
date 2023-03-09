@@ -4,7 +4,7 @@ import Link from "next/link";
 import CardVideoNav from "components/video/CardVideoNav";
 import { mataPelajaran } from "utils/constant/mata-pelajaran";
 
-const Header = () => {
+const HeaderAdmin = () => {
   const [isOpnVid, setIsOpnVid] = useState(false);
 
   return (
@@ -14,16 +14,6 @@ const Header = () => {
           href="/"
           className="flex title-font font-medium items-center text-white -my-1.5"
         >
-          {/* <div className="relative w-10 h-9">
-            <Image
-              src="/ruki.jpeg"
-              width={20}
-              height={17}
-              layout="responsive"
-              alt="logo"
-              className="rounded"
-            />
-          </div> */}
           <div className="bg-bone rounded-tr-xl">
             <p className="pl-1 pr-1.5 leading-9 text-4xl font-black text-third ">
               R
@@ -34,6 +24,9 @@ const Header = () => {
           </span>
         </Link>
         <nav className=" ml-auto mr-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-alegreya font-medium tracking-wider text-white">
+          <Link href="/" className="hover:text-gray-300 hover:font-bold">
+            Beranda
+          </Link>
           <button
             href="Video"
             className="hover:text-gray-300 hover:font-bold flex gap-0.5 items-center"
@@ -72,8 +65,17 @@ const Header = () => {
               </svg>
             )}
           </button>
-          <Link href="/materi" className="hover:text-gray-300 hover:font-bold">
+          <Link
+            href="/admin/materi"
+            className="hover:text-gray-300 hover:font-bold"
+          >
             File pembelajaran
+          </Link>
+          <Link
+            href="/admin/testimonial"
+            className="hover:text-gray-300 hover:font-bold"
+          >
+            Testimonial
           </Link>
         </nav>
       </div>
@@ -81,7 +83,7 @@ const Header = () => {
       {isOpnVid && (
         <div className="border-second border-t-2 px-2 md:px-4 lg:px-6 py-6 flex justify-center gap-4 flex-wrap">
           {mataPelajaran.map((i) => (
-            <CardVideoNav key={i.url} data={i} />
+            <CardVideoNav key={i.url} data={{ ...i, url: "/admin" + i.url }} />
           ))}
         </div>
       )}
@@ -89,4 +91,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderAdmin;

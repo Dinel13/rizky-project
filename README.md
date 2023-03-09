@@ -1,5 +1,10 @@
 https://colorhunt.co/palette/fffbeb495579263159251749
 
+
+apakah deskripis buuth editor
+
+bisa pake tumnail?
+
 Image by <a href="https://www.freepik.com/free-vector/internship-job-concept_10758457.htm#query=employee&position=9&from_view=keyword&track=sph">Freepik</a>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

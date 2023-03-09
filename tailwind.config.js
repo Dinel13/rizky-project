@@ -24,6 +24,9 @@ module.exports = {
         "2xs": ".65rem",
         "3xs": ".55rem"
       },
+      scale: {
+        '102': '1.025',
+      }
     },
     screens: {
       vvs: "350px",

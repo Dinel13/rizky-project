@@ -166,7 +166,7 @@ const Home = () => {
               </p>
             </div>
             <div className="grid gap-10 grid-cols-2 mt-16">
-              <div className="bg-gradient-to-r from-pink-700 via-fuchsia-700 to-purple-800 col-span-2 sm:col-span-1 px-9 py-7 rounded-3xl">
+              <div className="hover:scale-105 bg-gradient-to-r from-pink-700 via-fuchsia-700 to-purple-800 col-span-2 sm:col-span-1 px-9 py-7 rounded-3xl">
                 <h4 className="text-xl text-gray-100 font-semibold">
                   Materi Pembelajaran Video
                 </h4>
@@ -179,7 +179,7 @@ const Home = () => {
                   Lihat detail
                 </Link>
               </div>
-              <div className="bg-gradient-to-r from-purple-700 via-fuchsia-700 to-pink-800 col-span-2 sm:col-span-1 px-9 py-7 rounded-3xl">
+              <div className="hover:scale-105 bg-gradient-to-r from-purple-700 via-fuchsia-700 to-pink-800 col-span-2 sm:col-span-1 px-9 py-7 rounded-3xl">
                 <h4 className="text-xl text-gray-100 font-semibold">
                   Materi Pembelajaran PDF
                 </h4>
