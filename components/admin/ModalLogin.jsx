@@ -1,43 +1,38 @@
-import PendingButton from "components/button/PendingButton";
-import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
+
+import { defaultError } from "constant/error";
+import PendingButton from "components/button/PendingButton";
 import { useAuth } from "store/context";
 
 export default function ModalLogin() {
   const [loading, setLoading] = useState(false);
-  const { login } = useAuth();
   const username = useRef();
   const password = useRef();
   const [isShowPass, setIShowPass] = useState(false);
-  const router = useRouter();
+  const [error, setError] = useState(null);
+  const { login, setNeedLogin } = useAuth();
 
   const loginHandler = async (e) => {
-    e.stopPropagation();
+    e.preventDefault();
     try {
       setLoading(true);
-      const result = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/review`,
+      const res = await fetch(`/api/login`,
         {
           method: "POST",
           body: JSON.stringify({
-            user: username.current.value,
+            email: username.current.value,
             password: password.current.value,
           }),
         }
       );
-      const resdata = await result.json();
-      if (!result.ok) {
-        throw new Error(resdata.message || global.config.i18n["http-error"].id);
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || defaultError);
       }
-      login(resdata.data);
+      login(data.data);
     } catch (error) {
-      // dispatch(
-      //   showNotif({
-      //     type: "error",
-      //     head: "Gagal mengirim review kelas",
-      //     body: error.message,
-      //   })
-      // );
+      console.log(error);
+      setError(error.message);
     } finally {
       setLoading(false);
     }
@@ -59,10 +54,10 @@ export default function ModalLogin() {
       <div className="fixed inset-0 z-20 bg-gray-700 opacity-60"></div>
       <div className="fixed inset-0 z-20 flex items-center justify-center">
         <div className="bg-white py-6 px-8 rounded-xl flex flex-col justify-center items-center max-w-xl">
-          <h4 className="text-body font-semibold text-gray-600">
-            Masuk Ke <span className="text-main"> Jagokan! </span>
+          <h4 className="text-2xl font-semibold text-gray-600">
+            Masuk sebagai <span className="text-main"> Admin</span>
           </h4>
-          <form className="mt-6 text-left" onSubmit={loginHandler}>
+          <form className="mt-6 text-left w-72" onSubmit={loginHandler}>
             <div>
               <div className="relative mb-5">
                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -88,7 +83,7 @@ export default function ModalLogin() {
                   type="text"
                   required
                   id="input-group-1"
-                  className="w-full pl-11 p-2.5 border border-slate-300 rounded-lg focus:border-blue-200 focus:outline-none focus:ring-1"
+                  className="w-full pl-11 p-2.5 border border-slate-300 rounded-full focus:border-blue-200 focus:outline-none focus:ring-1"
                   placeholder="Username"
                   name="name"
                   autoComplete="off"
@@ -125,11 +120,11 @@ export default function ModalLogin() {
                   type="password"
                   name="password"
                   autoComplete="new-password"
-                  className="w-full pl-11 p-2.5 border border-slate-300 rounded-lg focus:border-blue-200 focus:outline-none focus:ring-1 pr-8"
+                  className="w-full pl-11 p-2.5 border border-slate-300 rounded-full focus:border-blue-200 focus:outline-none focus:ring-1 pr-12"
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute right-1.5 top-3 h-5 w-5"
+                  className="absolute right-2.5 top-3 h-5 w-5"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -140,25 +135,26 @@ export default function ModalLogin() {
                 </svg>
               </div>
             </div>
-            <div className="mt-6">
+            {error && <p className="text-red-500 text-xs">{error}</p>}
+            <div className="mt-8">
               {loading ? (
                 <PendingButton size="w-full py-2" btn="btn-sec" />
               ) : (
-                <>
-                  <button
-                    type="submit"
-                    className="w-full px-4 py-2 tracking-wide btn-sec text-base"
-                  >
-                    Masuk
-                  </button>
+                <div className="flex gap-2">
                   <button
                     type="reset"
-                    onClick={() => router.push("/")}
-                    className="w-full px-4 py-2 tracking-wide btn-sec text-base"
+                    onClick={() => setNeedLogin(false)}
+                    className="w-full px-4 py-1.5 tracking-wide btn-sec text-base"
                   >
                     Batal
                   </button>
-                </>
+                  <button
+                    type="submit"
+                    className="w-full px-4 py-1.5 tracking-wide btn-ter text-base"
+                  >
+                    Masuk
+                  </button>
+                </div>
               )}
             </div>
           </form>

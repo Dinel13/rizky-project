@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/link-passhref */
 import Link from "next/link";
-import Image from "next/image";
+import { useAuth } from "store/context";
 
 export default function Footer() {
+  const { token, setNeedLogin, logout } = useAuth();
+
   return (
-    <footer className="footer bg-gradient-to-l from-main via-third to-main mt-16">
+    <footer className="footer bg-gradient-to-br from-main to-third mt-16">
       <div className="wrapper">
         <div className="flex flex-wrap justify-between items-start mt-16">
           <div className="my-10 w-full xs:w-1/2 sm:w-1/3 md:w-1/3">
@@ -159,14 +161,25 @@ export default function Footer() {
                   </svg>
                   <p className="text-base text-gray-200">084564566456</p>
                 </a>
-                
               </div>
             </div>
           </div>
         </div>
-        <p className="text-sm text-gray-200 py-2 border-t my-10 pt-4">
-          © PT Rizki Edukasi Bangsa, 2023.
-        </p>
+        <div className="flex flex-wrap gap-3 border-t my-10 w-full justify-between">
+          <p className="text-gray-200 pt-4">© PT Rizki Edukasi Bangsa, 2023.</p>
+          {!token ? (
+            <button
+              onClick={() => setNeedLogin(true)}
+              className="p-4 pr-0 text-gray-300"
+            >
+              Admin
+            </button>
+          ) : (
+            <button onClick={logout} className="p-4 pr-0 text-gray-300">
+              User
+            </button>
+          )}
+        </div>
       </div>
     </footer>
   );

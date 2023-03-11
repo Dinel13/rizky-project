@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/link-passhref */
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
+
 import CardVideoNav from "components/video/CardVideoNav";
 import { mataPelajaran } from "utils/constant/mata-pelajaran";
 
@@ -23,16 +24,13 @@ const HeaderAdmin = () => {
             RIZKI
           </span>
         </Link>
-        <nav className=" ml-auto mr-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-alegreya font-medium tracking-wider text-white">
-          <Link href="/" className="hover:text-gray-300 hover:font-bold">
-            Beranda
-          </Link>
+        <nav className=" ml-auto mr-auto flex flex-wrap items-center justify-center gap-x-7 gap-y-1 font-semibold tracking-wide text-white">
           <button
             href="Video"
             className="hover:text-gray-300 hover:font-bold flex gap-0.5 items-center"
             onClick={() => setIsOpnVid((p) => !p)}
           >
-            <p>Video pembelajaran</p>
+            <p className="tracking-wide">Video</p>
             {isOpnVid ? (
               <svg
                 viewBox="0 0 24 24"
@@ -69,7 +67,7 @@ const HeaderAdmin = () => {
             href="/admin/materi"
             className="hover:text-gray-300 hover:font-bold"
           >
-            File pembelajaran
+            Materi
           </Link>
           <Link
             href="/admin/testimonial"

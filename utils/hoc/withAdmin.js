@@ -7,12 +7,9 @@ const withAdmin = (WrappedComponent) => {
   const Layout = (props) => {
     const { token } = useAuth();
 
-    if (!token) {
-      return <ModalLogin />;
-    }
-
     return (
       <>
+        {!token && <ModalLogin />}
         <HeaderAdmin />
         <main className="text-sm text-gray-600" style={{ minHeight: "83vh" }}>
           <WrappedComponent {...props} />;

@@ -33,13 +33,13 @@ const Header = () => {
             RIZKI
           </span>
         </Link>
-        <nav className=" ml-auto mr-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-1 font-alegreya font-medium tracking-wider text-white">
+        <nav className=" ml-auto mr-auto flex flex-wrap items-center justify-center gap-x-7 gap-y-1 font-semibold tracking-wide text-white">
           <button
             href="Video"
             className="hover:text-gray-300 hover:font-bold flex gap-0.5 items-center"
             onClick={() => setIsOpnVid((p) => !p)}
           >
-            <p>Video pembelajaran</p>
+            <p className="tracking-wide">Video</p>
             {isOpnVid ? (
               <svg
                 viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ const Header = () => {
             )}
           </button>
           <Link href="/materi" className="hover:text-gray-300 hover:font-bold">
-            File pembelajaran
+            Materi
           </Link>
         </nav>
       </div>
