@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 
-import { defaultError } from "constant/error";
+import { defaultError } from "utils/constant/error";
 import PendingButton from "components/button/PendingButton";
 import { useAuth } from "store/context";
 
@@ -16,15 +16,13 @@ export default function ModalLogin() {
     e.preventDefault();
     try {
       setLoading(true);
-      const res = await fetch(`/api/login`,
-        {
-          method: "POST",
-          body: JSON.stringify({
-            email: username.current.value,
-            password: password.current.value,
-          }),
-        }
-      );
+      const res = await fetch(`/api/login`, {
+        method: "POST",
+        body: JSON.stringify({
+          email: username.current.value,
+          password: password.current.value,
+        }),
+      });
       const data = await res.json();
       if (!res.ok) {
         throw new Error(data.message || defaultError);
