@@ -175,7 +175,7 @@ const Home = () => {
                   berbagai mata pelajaran dan tingkat kelas. Tonton video sesuai
                   dengan topik atau bagian tertentu dari materi pembelajaran.
                 </p>
-                <Link href="" className="btn-ter py-2 px-8 mt-5 inline-block">
+                <Link href="/video" className="btn-ter py-2 px-8 mt-5 inline-block">
                   Lihat detail
                 </Link>
               </div>
@@ -188,7 +188,7 @@ const Home = () => {
                   yang sesuai dengan kurikulum nasional. Baca, catat, dan
                   pelajari materi dengan mudah.
                 </p>
-                <Link href="" className="btn-ter py-2 px-8 mt-5 inline-block">
+                <Link href="/materi" className="btn-ter py-2 px-8 mt-5 inline-block">
                   Lihat detail
                 </Link>
               </div>

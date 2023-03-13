@@ -40,9 +40,10 @@ module.exports = {
       "2xl": "1536px",
     },
     fontSize: {
-      xs: ".77rem",
-      sm: ".875rem",
-      base: "1rem",
+      xs: ".74rem",
+      sm: ".855rem",
+      base: ".95rem",
+      md: "1.055rem",
       lg: "1.125rem",
       xl: "1.25rem",
       "2xl": "1.5rem",
